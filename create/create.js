@@ -2,13 +2,9 @@ import {
     createBunny,
     getFamilies,
     checkAuth,
-    logout
+    logout,
 } from '../fetch-utils.js';
-checkAuth();
 
-logoutButton.addEventListener('click', () => {
-    logout();
-});
 const form = document.querySelector('.bunny-form');
 const logoutButton = document.getElementById('logout');
 
@@ -40,4 +36,10 @@ window.addEventListener('load', async () => {
         // and append the option to the select
         select.append(option);
     }
+});
+
+checkAuth();
+
+logoutButton.addEventListener('click', () => {
+    logout();
 });
