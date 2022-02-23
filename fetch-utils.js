@@ -59,6 +59,6 @@ export async function logout() {
     return (window.location.href = '../');
 }
 
-function checkError({ data, error }) {
+export async function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
