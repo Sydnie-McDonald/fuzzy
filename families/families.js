@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { checkAuth, deleteBunny, getFamilies, logout } from '../fetch-utils.js';
 
 checkAuth();
