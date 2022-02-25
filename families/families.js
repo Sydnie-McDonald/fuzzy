@@ -24,14 +24,6 @@ async function displayFamilies() {
 
     for (let family of families) {
         // create three elements for each family, one for the whole family, one to hold the name, and one to hold the bunnies
-        // your HTML Element should look like this:
-        // <div class="family">
-        //    <h3>the Garcia family</h3>
-        //    <div class="bunnies">
-        //        <div class="bunny">Fluffy</div>
-        //        <div class="bunny">Bob</div>
-        //    </div>
-        // </div>
         // add the bunnies css class to the bunnies el, and family css class to the family el
         // put the family name in the name element
         const familyEl = document.createElement('div');
@@ -58,10 +50,8 @@ async function displayFamilies() {
             });
 
             bunniesDiv.append(bunnyDiv);
-
+            familyEl.append(h3, bunniesDiv);
         }
-
-        familyEl.append(h3, bunniesDiv);
 
         // append this bunnyEl to the bunniesEl
 
