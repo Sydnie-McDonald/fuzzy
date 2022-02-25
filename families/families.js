@@ -18,7 +18,7 @@ window.addEventListener('load', async () => {
 async function displayFamilies() {
     // fetch families from supabase
     const families = await getFamilies();
-    //console.log(families);
+    console.log(families);
     // clear out the familiesEl
     familiesEl.textContent = '';
 
@@ -37,8 +37,7 @@ async function displayFamilies() {
         // for each of this family's bunnies
         //    make an element with the css class 'bunny', and put the bunny's name in the text content
         const bunnies = family.fuzzy_bunnies;
-        //console.log(bunnies);
-
+        console.log(bunnies);
         for (let bunny of bunnies) {
             const bunnyDiv = document.createElement('div');
             bunnyDiv.classList.add('bunny');
@@ -50,12 +49,13 @@ async function displayFamilies() {
             });
 
             bunniesDiv.append(bunnyDiv);
-            familyEl.append(h3, bunniesDiv);
+            console.log(bunniesDiv);
+            console.log('hey there', bunnyDiv);
         }
-
+        familyEl.append(h3, bunniesDiv);
         // append this bunnyEl to the bunniesEl
 
-        familiesEl.append(family);
+        familiesEl.append(familyEl);
     }
 
     // append the bunniesEl and nameEl to the familyEl

@@ -148,6 +148,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: hsla(224, 40%, 79%, 1);
 }
 
 .family {
@@ -169,7 +170,7 @@ footer {
 .bunny {
     margin: 3px;
     padding: 3px;
-    border: dotted 2px magenta;
+    border: solid 2px purple;
     cursor: pointer;
 }
 
